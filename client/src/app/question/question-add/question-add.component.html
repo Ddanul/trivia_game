@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>add</title>
+  </head>
+  <body>
+    <button [routerLink]="['/question/landing']">Go Home</button>
+
+    <div class="body">
+      <h3>New Question</h3>
+      <form #questionForm = "ngForm" (submit)="add_question()">
+        <label for="question">Question:</label>
+          <input type="text" [(ngModel)]="new_question.question" name="question" ngModel required><br>
+        <label for="correct">Correct Answer:</label>
+          <input type="text" [(ngModel)]="new_question.correct" name="correct" ngModel required><br>
+        <label for="fake1">Fake Answer 1:</label>
+          <input type="text" [(ngModel)]="new_question.fake1" name="fake1" ngModel required><br>
+        <label for="fake1">Fake Answer 2:</label>
+          <input type="text" [(ngModel)]="new_question.fake2" name="fake2" ngModel required><br>
+        <button [disabled]="!questionForm.form.valid" type="submit">Add Question</button>
+      </form>
+    </div>
+  </body>
+</html>

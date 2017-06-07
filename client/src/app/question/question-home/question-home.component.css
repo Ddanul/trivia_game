@@ -1,0 +1,6 @@
+.question{
+  text-align: left;
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 0 0 20px 20px;
+}

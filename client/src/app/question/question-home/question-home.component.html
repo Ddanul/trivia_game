@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>quiz</title>
+  </head>
+  <body>
+    <form #answerForm = "ngForm" (ngSubmit)="grade_test(answerForm)">
+      <div *ngFor="let question of test_questions; let i=index" class="question">
+        <p>{{question[0]}}</p>
+        <input type="radio" name='{{i}}' value={{question[1]}} ngModel required> {{question[1]}} <br>
+        <input type="radio" name='{{i}}' value={{question[2]}} ngModel required> {{question[2]}} <br>
+        <input type="radio" name='{{i}}' value={{question[3]}} ngModel required> {{question[3]}} <br>
+      </div>
+      <br>
+      <button [disabled]="!answerForm.form.valid" type="submit">submit</button>
+    </form>
+    <button (click)="redirect('question/landing')">Cancel</button>
+  </body>
+</html>

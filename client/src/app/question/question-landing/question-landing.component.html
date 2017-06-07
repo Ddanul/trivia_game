@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>land</title>
+  </head>
+  <body>
+
+    <div class="head">
+      <button [routerLink]="['/question/add']">Add a Question</button>
+      <button (click)="logout_function()">Logout</button>
+    </div>
+
+    <div *ngIf="score > 0" class="score">
+        <h1>You last scored {{score}}/3!</h1>
+    </div>
+    <div *ngIf="score == 'zero'" class="score">
+        <h1>You last scored 0/3! Try again!</h1>
+    </div>
+
+    <div class="body">
+      <h3>Click below to start a new game!</h3>
+      <button (click)="redirect('question/home')">Let's Play!</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.head{
+  padding-bottom:20px;
+}
+
+.body{
+  border: 2px solid silver;
+  padding-bottom: 20px;
+}
+
+.score{
+  background-color: #158a7c;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.score h1{
+  color: white;
+}
